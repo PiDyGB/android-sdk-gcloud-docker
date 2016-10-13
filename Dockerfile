@@ -14,6 +14,8 @@ RUN tar xzf /opt/google-cloud-sdk-129.0.0-linux-x86_64.tar.gz -C /opt
 # Install the Cloud SDK
 RUN echo y | /opt/google-cloud-sdk/install.sh
 
+ENV PATH=/opt/google-cloud-sdk/bin:$PATH
+
 # Run gcloud init to get started
 RUN echo y | /opt/google-cloud-sdk/bin/gcloud components install beta
 
