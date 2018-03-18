@@ -18,9 +18,6 @@ RUN echo y | /opt/google-cloud-sdk/install.sh
 
 ENV PATH=/opt/google-cloud-sdk/bin:$PATH
 
-# Run gcloud init to get started
-RUN echo y | /opt/google-cloud-sdk/bin/gcloud components install beta
-
 # Clean up
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm -f /opt/${GCLOUD_TAR} && \
