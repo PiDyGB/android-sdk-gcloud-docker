@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y dist-upgrade
 #Add required software
 RUN apt-get -y install python
 
-ENV GCLOUD_TAR=google-cloud-sdk-193.0.0-linux-x86_64.tar.gz
+ENV GCLOUD_TAR=google-cloud-sdk-238.0.0-linux-x86_64.tar.gz
 
 # Add the Cloud SDK
 ADD https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${GCLOUD_TAR} /opt/
